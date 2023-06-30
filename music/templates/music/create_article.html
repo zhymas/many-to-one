@@ -1,0 +1,9 @@
+{% extends 'music/index.html' %}
+{% block title %}Create Article{% endblock %}
+{% block content %}
+<form action="{% url 'create_article' %}" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button type="submit">Add</button>
+</form>
+{% endblock %}
